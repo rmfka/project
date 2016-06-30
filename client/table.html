@@ -1,0 +1,26 @@
+<template name="table">
+  <table class="table table-striped table-condensed" >
+    <thead>
+    <tr>
+      <!--<td>ID</td>-->
+      <td>이름</td>
+      <td>이메일</td>
+      <td>전화번호</td>
+      <td>코딩취향</td>
+      <td>이미지</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each boards}}
+      <tr dataId="{{_id}}" data-toggle="modal" data-target="#myModal">
+        <td hidden>{{_id}}</td>
+        <td>{{inpName}}</td>
+        <td>{{inpEmail}}</td>
+        <td>{{inpPhone}}</td>
+        <td>{{inpSelect}}</td>
+        <td><img src="{{image}}" style="width:100px;"></td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</template>
